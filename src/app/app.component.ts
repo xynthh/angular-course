@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CourseCardComponent } from './components/course-card/course-card.component';
-import { COURSES } from './db-data';
 import { CourseModel } from './components/course-card/models/course.model';
+import { COURSES } from './db-data';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ import { CourseModel } from './components/course-card/models/course.model';
 })
 export class AppComponent {
 
-  courses = COURSES;
+  courses: CourseModel[] = [...COURSES];
 
   onCourseSelected(course: CourseModel) {
     console.log('App component - click event buddled...', course);

@@ -8,8 +8,15 @@ import { CourseModel } from './models/course.model';
   styleUrl: './course-card.component.css',
 })
 export class CourseCardComponent {
-  @Input()
+  @Input({
+    required: true,
+  })
   course!: CourseModel;
+
+  @Input({
+    required: true,
+  })
+  index!: number;
 
   @Output()
   courseEmitter = new EventEmitter<CourseModel>();
