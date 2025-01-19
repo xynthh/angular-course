@@ -1,8 +1,5 @@
-
-
-
 <div class="courses">
-  <app-course-card [course]="coreCourse"/>
-  <app-course-card [course]="rxjsCourse"/>
-  <app-course-card [course]="ngrxCourse"/>
+  <app-course-card (courseEmitter)="onCourseSelected($event)" [course]="coreCourse" />
+  <app-course-card (courseEmitter)="onCourseSelected($event)" [course]="rxjsCourse" />
+  <app-course-card (courseEmitter)="onCourseSelected($event)" [course]="ngrxCourse" />
 </div>

@@ -1,18 +1,22 @@
-import {Component} from '@angular/core';
-import {CourseCardComponent} from './components/course-card/course-card.component';
-import {COURSES} from './db-data';
+import { Component } from '@angular/core';
+import { CourseCardComponent } from './components/course-card/course-card.component';
+import { COURSES } from './db-data';
+import { CourseModel } from './components/course-card/models/course.model';
 
 @Component({
   selector: 'app-root',
-  // imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   imports: [
-    CourseCardComponent
-  ]
+    CourseCardComponent,
+  ],
 })
 export class AppComponent {
-  coreCourse = COURSES[0];
-  rxjsCourse = COURSES[1];
-  ngrxCourse = COURSES[2];
+  coreCourse: CourseModel = COURSES[0];
+  rxjsCourse: CourseModel = COURSES[1];
+  ngrxCourse: CourseModel = COURSES[2];
+
+  onCourseSelected(course: CourseModel) {
+    console.log('App component - click event buddled...', course);
+  }
 }
