@@ -1,3 +1,5 @@
+/* Own Material 3 */
+
 .course-card {
   display: flex;
   flex-direction: column;
@@ -31,4 +33,15 @@ img {
   font-weight: 600;
   margin-bottom: 12px;
   color: #212121;
+}
+
+button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #005ba3;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
 }
