@@ -1,5 +1,5 @@
 <div class="courses">
-  <app-course-card (courseEmitter)="onCourseSelected($event)" [course]="coreCourse" />
-  <app-course-card (courseEmitter)="onCourseSelected($event)" [course]="rxjsCourse" />
-  <app-course-card (courseEmitter)="onCourseSelected($event)" [course]="ngrxCourse" />
+  @for (course of courses; track course.id) {
+    <app-course-card (courseEmitter)="onCourseSelected($event)" [course]="course" />
+  }
 </div>

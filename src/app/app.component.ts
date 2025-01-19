@@ -12,9 +12,8 @@ import { CourseModel } from './components/course-card/models/course.model';
   ],
 })
 export class AppComponent {
-  coreCourse: CourseModel = COURSES[0];
-  rxjsCourse: CourseModel = COURSES[1];
-  ngrxCourse: CourseModel = COURSES[2];
+
+  courses = COURSES;
 
   onCourseSelected(course: CourseModel) {
     console.log('App component - click event buddled...', course);
