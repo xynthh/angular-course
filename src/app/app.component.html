@@ -1,23 +1,10 @@
 <div class="courses">
-  @for (course of courses;
-    track course.id;
-    let index = $index;
-    let first = $first;
-    let last = $last;
-    let even = $even;
-    let odd = $odd;
-    ) {
 
-    <app-course-card
-      (courseEmitter)="onCourseSelected($event)"
-      [course]="course"
-      [index]="index"
-      [class.is-first]="first"
-      [class.is-last]="last"
-      [class.is-even]="even"
-      [class.is-odd]="odd"
-    />
-  } @empty {
-    <h1>No courses available!</h1>
-  }
+
+  <app-course-card
+    (courseEmitter)="onCourseSelected($event)"
+    *ngFor="let course of courses; index as index"
+    [course]="course"
+    [index]="index"
+  />
 </div>

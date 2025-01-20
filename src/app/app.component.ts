@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CourseCardComponent } from './components/course-card/course-card.component';
 import { CourseModel } from './components/course-card/models/course.model';
 import { COURSES } from './db-data';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { COURSES } from './db-data';
   styleUrl: './app.component.css',
   imports: [
     CourseCardComponent,
+    CommonModule,
   ],
 })
 export class AppComponent {
