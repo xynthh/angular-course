@@ -1,6 +1,7 @@
-import { Client } from 'appwrite';
+import { Account, Client } from 'appwrite';
 
-const client = new Client();
+export const client = new Client();
 client.setProject('678f9ca40018f19534c5');
 
-export default client;
+export const account = new Account(client);
+export { ID } from 'appwrite';
