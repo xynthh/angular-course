@@ -1,10 +1,12 @@
 <div class="courses">
 
-
-  <app-course-card
-    (courseEmitter)="onCourseSelected($event)"
-    *ngFor="let course of courses; index as index"
-    [course]="course"
-    [index]="index"
-  />
+  @for (course of courses; track course.id) {
+    <app-course-card
+      (courseEmitter)="onCourseSelected($event)"
+      [course]="course"
+      [index]="$index"
+    />
+  } @empty {
+    <p>No courses found!</p>
+  }
 </div>

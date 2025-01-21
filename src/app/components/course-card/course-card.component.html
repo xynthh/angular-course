@@ -3,9 +3,13 @@
   <div class="course-title">
     {{ index }}. {{ course.description }}
   </div>
-  <img [src]=course.iconUrl alt="Angular Logo"
-       width="300">
 
+  @if (course.iconUrl) {
+    <img [src]=course.iconUrl alt="Angular Logo"
+         width="300">
+  } @else {
+    <img src="https://lipsum.app/510x287/" alt="image broken">
+  }
   <div class="course-description">
     {{ course.longDescription }}
   </div>
