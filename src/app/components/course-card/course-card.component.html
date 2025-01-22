@@ -1,15 +1,15 @@
-<div class="course-card">
+<div *ngIf="course" class="course-card">
 
   <div class="course-title">
     {{ index }}. {{ course.description }}
   </div>
 
-  @if (course.iconUrl) {
-    <img [src]=course.iconUrl alt="Angular Logo"
-         width="300">
-  } @else {
-    <img src="https://lipsum.app/510x287/" alt="image broken">
-  }
+  <img *ngIf="course.iconUrl; else noimage" [src]=course.iconUrl alt="Angular Logo" width="300">
+
+  <ng-template #noimage>
+    <img alt="Lorem IMG" src="https://lipsum.app/510x287/">
+  </ng-template>
+
   <div class="course-description">
     {{ course.longDescription }}
   </div>

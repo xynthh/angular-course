@@ -1,9 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CourseModel } from './models/course.model';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-course-card',
-  imports: [],
+  imports: [
+    NgIf,
+  ],
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.css',
 })
