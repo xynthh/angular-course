@@ -45,3 +45,11 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
+.course-card.beginner {
+  background-color: lightsalmon;
+}
+
+.course-card.advanced {
+  background-color: lightgreen;
+}
