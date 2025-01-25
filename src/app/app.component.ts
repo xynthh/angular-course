@@ -17,6 +17,11 @@ export class AppComponent {
 
   courses: CourseModel[] = [...COURSES];
 
+  startDate = new Date();
+  title = 'angular core deep dive';
+  price = 9.99;
+  rate = 0.67;
+
   onCourseSelected(course: CourseModel) {
     console.log('App component - click event buddled...', course);
   }

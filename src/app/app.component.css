@@ -22,3 +22,11 @@ app-course-card.is-even {
 app-course-card.is-odd {
   background-color: #3ca7ff;
 }
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  font-size: 1.5rem;
+}

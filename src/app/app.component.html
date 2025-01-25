@@ -1,3 +1,11 @@
+<div class="demo">
+  <div>Start Date: {{ startDate | date: 'MM/dd/yyyy' }}</div>
+  <div>{{ title | titlecase }}</div>
+  <div>{{ price | number: '3.3-5' }}</div>
+  <div>{{ price | currency: 'EUR' }}</div>
+  <div>{{ rate | percent }}</div>
+</div>
+
 <div class="courses">
 
   @for (course of courses; track course.id) {
