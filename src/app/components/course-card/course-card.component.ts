@@ -1,16 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CourseModel } from './models/course.model';
-import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 
 @Component({
   selector: 'app-course-card',
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.css',
-  imports: [
-    NgSwitch,
-    NgSwitchCase,
-    NgSwitchDefault,
-  ],
 })
 export class CourseCardComponent {
   @Input({
