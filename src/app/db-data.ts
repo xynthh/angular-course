@@ -1,19 +1,21 @@
 ﻿import { CourseModel } from './components/course-card/models/course.model';
 
 export const COURSES: CourseModel[] = [
+
   {
     id: 1,
     description: 'Angular Core Deep Dive',
-    iconUrl: '',
+    iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png',
     longDescription: 'A detailed walk-through of the most important part of Angular - the Core and Common modules',
     lessonsCount: 10,
+    category: 'INTERMEDIATE',
   },
   {
     id: 2,
     description: 'RxJs In Practice Course',
     iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/rxjs-in-practice-course.png',
     longDescription: 'Understand the RxJs Observable pattern, learn the RxJs Operators via practical examples',
-    category: 'BEGINNER',
+    category: '',
     lessonsCount: 10,
   },
 
@@ -77,6 +79,7 @@ export const COURSES: CourseModel[] = [
     longDescription: 'Build Applications with the official Angular Widget Library',
     category: 'ADVANCED',
   },
+
 ];
 
 export function findCourseById(courseId: number) {

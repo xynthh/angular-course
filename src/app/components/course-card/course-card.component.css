@@ -46,10 +46,26 @@ button {
   cursor: pointer;
 }
 
-.course-card.beginner {
+.beginner {
+  padding: 0 4px;
   background-color: lightsalmon;
 }
 
-.course-card.advanced {
+.advanced {
+  padding: 0 4px;
   background-color: lightgreen;
+}
+
+.intermediate {
+  padding: 0 4px;
+  background-color: lightblue;
+}
+
+.unknown {
+  padding: 0 4px;
+  background-color: lightgray;
+}
+
+.course-category {
+  margin-top: 15px;
 }
