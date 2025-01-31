@@ -8,13 +8,9 @@ import { CommonModule } from '@angular/common';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [
-    CourseCardComponent,
-    CommonModule,
-  ],
+  imports: [CourseCardComponent, CommonModule],
 })
 export class AppComponent {
-
   courses: CourseModel[] = [...COURSES];
 
   startDate = new Date();

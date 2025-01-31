@@ -27,8 +27,8 @@ export class CourseCardComponent {
 
   cardClasses() {
     return {
-      'beginner': this.course.category == 'BEGINNER',
-      'advanced': this.course.category == 'ADVANCED',
+      beginner: this.course.category == 'BEGINNER',
+      advanced: this.course.category == 'ADVANCED',
     };
   }
 }
