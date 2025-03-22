@@ -5,7 +5,7 @@
   <div>{{ price | currency : "EUR" }}</div>
   <div>{{ rate | percent }}</div>
 </div>
-@defer (on timer(5s); prefetch on immediate) {
+@defer (on timer(15s); prefetch on timer(10s)) {
   <!--  Должно работать,но у меня не работает)) -->
   <div class="courses">
     @for (course of courses; track course.id) {
@@ -22,4 +22,6 @@
   <h2>This is the placeholder!</h2>
 } @loading {
   <h2>This ist the loading indicator...</h2>
+} @error {
+  <h2>An error occurred!</h2>
 }
