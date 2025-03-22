@@ -1,0 +1,17 @@
+stages:
+  - deploy
+
+deploy_to_dokku:
+  stage: deploy
+  only:
+    - main  # или ветка, с которой ты деплоишь
+  before_script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$DOKKU_SSH_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan xaerof.ru >> ~/.ssh/known_hosts
+  script:
+    - git remote add dokku dokku@xaerof.ru:angular-course || true
+    - git push dokku HEAD:main  # или HEAD:main, если докку использует main
