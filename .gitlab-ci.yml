@@ -14,4 +14,4 @@ deploy_to_dokku:
     - ssh-keyscan xaerof.ru >> ~/.ssh/known_hosts
   script:
     - git remote add dokku dokku@xaerof.ru:angular-course || true
-    - git push dokku HEAD:main  # или HEAD:main, если докку использует main
+    - git push dokku HEAD:refs/heads/main  # или HEAD:main, если докку использует main
