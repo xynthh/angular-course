@@ -7,11 +7,12 @@
 </div>
 
 <div>
-  <input #prefetchInput placeholder="Type to trigger prefetch">
-  <button #display>Trigger Display</button>
+  <div style="min-height: 300px; border: red 5px solid; padding: 10px">
+    <button #display>Trigger Display</button>
+  </div>
 </div>
 
-@defer (on interaction(display); prefetch on interaction(prefetchInput)) {
+@defer (on interaction(display); prefetch on hover(display)) {
   <div class="courses">
     @for (course of courses; track course.id) {
       <app-course-card
