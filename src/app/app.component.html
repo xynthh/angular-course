@@ -6,9 +6,12 @@
   <div>{{ rate | percent }}</div>
 </div>
 
-<div style="border: 5px solid red; min-height: 900px; margin: 10px;"></div>
+<div>
+  <input #prefetchInput placeholder="Type to trigger prefetch">
+  <button #display>Trigger Display</button>
+</div>
 
-@defer (on viewport; prefetch on idle) {
+@defer (on interaction(display); prefetch on interaction(prefetchInput)) {
   <div class="courses">
     @for (course of courses; track course.id) {
       <app-course-card
