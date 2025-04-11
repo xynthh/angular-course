@@ -8,11 +8,12 @@
 
 <div>
   <div style="min-height: 300px; border: red 5px solid; padding: 10px">
-    <button #display>Trigger Display</button>
+    <button (click)="onPrefetch()">Trigger Prefetch</button>
+    <button (click)="onDisplay()">Trigger Display</button>
   </div>
 </div>
 
-@defer (on interaction(display); prefetch on hover(display)) {
+@defer (when display; prefetch when performPrefetch) {
   <div class="courses">
     @for (course of courses; track course.id) {
       <app-course-card

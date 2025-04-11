@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { CourseCardComponent } from './components/course-card/course-card.component';
-import { CourseModel } from './components/course-card/models/course.model';
-import { COURSES } from './db-data';
-import { CommonModule } from '@angular/common';
+import {Component} from '@angular/core';
+import {CourseCardComponent} from './components/course-card/course-card.component';
+import {CourseModel} from './components/course-card/models/course.model';
+import {COURSES} from './db-data';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,18 @@ export class AppComponent {
   price = 9.99;
   rate = 0.67;
 
+  performPrefetch = false;
+  display = false;
+
   onCourseSelected(course: CourseModel) {
     console.log('App component - click event buddled...', course);
+  }
+
+  onPrefetch() {
+    this.performPrefetch = true;
+  }
+
+  onDisplay() {
+    this.display = true;
   }
 }
